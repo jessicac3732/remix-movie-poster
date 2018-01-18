@@ -1,0 +1,138 @@
+<!--https://upload.wikimedia.org/wikipedia/commons/e/e5/US_Naval_Jack.svg -- Background image-->
+<!--https://www.flickr.com/photos/walkadog/3555620262/in/photolist-6qcu2C-6ge8ma-UcZFz9-22SM6f-86nTPG-4FUort-7UzoDT-7UQtmF-b15uK-HoabEZ-eSripp-86Hsv2-nPVWAg-TYpNyf-buWfR-5hoZkL-ozD5Du-rrPNFG-VfthkB-aPDPd2-ozSrfG-7ycA48-FCkzD-V7m7oA-29Xix8-9RRXJi-wMHRnu-bkBFBP-fruwt-52KmLW-6cWRVh-a5dWtP-7ycKzg-9HNuNs-EUNSd-VvNwfq-7M5wRM-5hjEpV-9HWwHz-7woX3c-8nqqAZ-nFXUKy-nosJdT-EUNvH-nrvVh4-ozFSCw-YuxRE9-2kU5B8-o2UzDY-pNvSxF -- American Flag image-->
+<!--https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Seal_of_the_United_States_House_of_Representatives.svg/2000px-Seal_of_the_United_States_House_of_Representatives.svg.png-->
+<!--https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Seal_of_the_United_States_Congress.svg/2000px-Seal_of_the_United_States_Congress.svg.png-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Play" rel="stylesheet">
+  <style type="text/css">
+  .container{
+      position:absolute;
+      text-align:center;
+  }
+   
+   #fiftyStars{
+    background-image:url(FiftyStars.svg);   
+    background-size:cover;
+    opacity:0.3;
+   }
+   
+   .title-box{
+       position:absolute;
+       top:0px;
+       margin-left:30%;
+       margin-top:2%;
+       width:600px;
+       height:150px;
+       background-color:white;
+       border:5px;
+       border-radius: 20px;
+       box-shadow:10px 20px;
+       animation:flag-colors 5s linear 0s infinite;
+   }
+   
+   .title-name{
+       position:absolute;
+       top:0px;
+       margin-left:35%;
+       margin-top:4%;
+       font-size:40px;
+       font-family: 'Merriweather', serif;
+   }
+   
+   @keyframes flag-colors{
+       0%{background-color:red;}
+       50%{background-color:white;}
+       100%{background-color:blue;}
+   }
+   
+    
+    .flag{
+        position:absolute;
+        width:10%;
+        top:0px;
+        right:12%;
+        margin-top:50px;
+    }
+    .overlay{
+        position:absolute;
+        top:-10%;
+        right:-25%;
+        margin-top:50px;
+        opacity:0;
+        transition: 1s ease;
+        background-color: lightgray;
+        height:50%;
+        width:100%;
+        transform:translate(50px);
+    }
+    
+    .flag:hover .overlay{
+        opacity:1;
+    }
+    
+    .text{
+        font-size: 15px;
+        font-family: 'Play', sans-serif;
+        position: absolute;
+        text-align: center;
+    }
+    
+    #capitalPic{
+        position: absolute;
+        left:-80%;
+        margin-top:100%;
+        width:400px;
+    }
+    
+    .capital{
+        transform:skewY(10deg);
+    }
+    
+    #CongressSymbol{
+        width:250px;
+        position: absolute;
+        right:80%;
+        top:30%;
+        transform:skewX(10deg);
+    }
+    
+    #HouseSymbol{
+        width:250px;
+        position:absolute;
+        top:30%;
+        right:50%;
+        transform:skewX(10deg);
+    }
+    
+  </style>
+  </head>
+  <body>
+  <div class = "container">
+  <img id ="fiftyStars" src="FiftyStars.svg">
+  <div class = "title-box"></div>
+      <div class="title-name">
+          Knowing The Branches 
+      </div>
+    <div class = "UScongress">
+        <img id = "CongressSymbol" src="UScongress.png">
+    </div>
+    <div class = "UShouse">
+        <img id = "HouseSymbol" src="UShouse of representatives.png">
+    </div>
+   <div class = "flag">
+       <img id = "USflag" src="AmericanFlag.jpg">
+       <div class= "overlay">
+           <div class = "text">One important job of the government is <strong>to establish <mark>Justice</mark></strong></div>
+       </div>
+    <div class = "capital">
+        <img id = "capitalPic" src="capital.jpg">
+    </div>
+    
+   </div>
+  </div>
+  </body>
+</html>
