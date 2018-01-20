@@ -1,7 +1,3 @@
-<!--https://upload.wikimedia.org/wikipedia/commons/e/e5/US_Naval_Jack.svg -- Background image-->
-<!--https://www.flickr.com/photos/walkadog/3555620262/in/photolist-6qcu2C-6ge8ma-UcZFz9-22SM6f-86nTPG-4FUort-7UzoDT-7UQtmF-b15uK-HoabEZ-eSripp-86Hsv2-nPVWAg-TYpNyf-buWfR-5hoZkL-ozD5Du-rrPNFG-VfthkB-aPDPd2-ozSrfG-7ycA48-FCkzD-V7m7oA-29Xix8-9RRXJi-wMHRnu-bkBFBP-fruwt-52KmLW-6cWRVh-a5dWtP-7ycKzg-9HNuNs-EUNSd-VvNwfq-7M5wRM-5hjEpV-9HWwHz-7woX3c-8nqqAZ-nFXUKy-nosJdT-EUNvH-nrvVh4-ozFSCw-YuxRE9-2kU5B8-o2UzDY-pNvSxF -- American Flag image-->
-<!--https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Seal_of_the_United_States_House_of_Representatives.svg/2000px-Seal_of_the_United_States_House_of_Representatives.svg.png-->
-<!--https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Seal_of_the_United_States_Congress.svg/2000px-Seal_of_the_United_States_Congress.svg.png-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,45 +5,48 @@
     <title>title</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Play" rel="stylesheet">
   <style type="text/css">
-  .container{
-      position:absolute;
-      text-align:center;
+  .container{ 
+      position:absolute;/*takes objects out of the flow*/
+      text-align:center; /*centers all text*/
   }
    
    #fiftyStars{
-    background-image:url(FiftyStars.svg);   
-    background-size:cover;
-    opacity:0.7;
+    background-image:url(FiftyStars.svg);/*sets image as background*/
+    background-size:cover; /*picture fills the whole browser screen*/
+    opacity:0.6; /*transparency*/
    }
    
    .title-box{
        position:absolute;
        top:0px;
-       margin-left:20%;
-       margin-top:2%;
+       margin-left:20%; /*creates space to the right of element*/
+       margin-top:2%; /*create space to the bottom of element*/
+       
+       /*restrains a objects width and height to a certain value*/
        width:600px;
        height:150px;
+       
        background-color:white;
        border:5px;
-       border-radius: 20px;
+       border-radius: 20px; /*makes a rounded rectangle*/
        box-shadow:10px 20px;
-       animation:flag-colors 5s linear 0s infinite;
+       animation:flag-colors 5s linear 0s infinite; /*makes the title change colors continuously*/
    }
    
    .title-name{
        position:absolute;
        top:0px;
        margin-left:25%;
-       margin-top:4%;
+       margin-top:5%;
        font-size:40px;
        font-family: 'Merriweather', serif;
-       text-shadow:1px 1px lightgreen;
+       text-shadow:1px 1px lightgreen; 
    }
-   
+   /*specify what order the colors will change from, for title-box*/
    @keyframes flag-colors{
-       0%{background-color:red;}
+       0%{background-color:#ff7777;} /*a type of red*/
        50%{background-color:white;}
-       100%{background-color:blue;}
+       100%{background-color:#77abff;}/*a type of blue*/
    }
    
     
@@ -55,24 +54,25 @@
         position:absolute;
         width:10%;
         top:0px;
-        right:12%;
+        right:22%;
         margin-top:50px;
     }
+    
     .overlay{
         position:absolute;
         top:-35%;
         right:-25%;
         margin-top:50px;
-        opacity:0;
-        transition: 1s ease;
+        opacity:0;/*completely transparent*/
+        transition: 1s ease; /*controls the timing and speed of gray background*/
         background-color: lightgray;
         height:80%;
         width:100%;
-        transform:translate(50px);
+        transform:translate(50px); /*moves gray background to left(lower#) or right(higher#)*/
     }
     
-    .flag:hover .overlay{
-        opacity:1;
+    .flag:hover .overlay{ /*when mouse is on flag*/
+        opacity:1; /*gray background with text appears*/
     }
     
     .text{
@@ -84,31 +84,21 @@
     
     #capitalPic{
         position: absolute;
-        left:-80%;
+        left:5%;
+        top:100%;
         margin-top:100%;
         width:400px;
         box-shadow:10px 20px;
     }
     
     .capital{
-        transform:skewY(10deg);
+        transform:skewY(5deg); /*slants picture on y-axis*/
     }
     
-    #CongressSymbol{
-        width:250px;
-        position: absolute;
-        right:80%;
-        top:30%;
-        transform:skewX(10deg);
-        
-    }
-    
-    #HouseSymbol{
-        width:250px;
+    .mainCharacter{
         position:absolute;
-        top:30%;
-        right:50%;
-        transform:skewX(10deg);
+        right:84%;
+        top:3%;
     }
     
     .textBackground{
@@ -117,25 +107,95 @@
         margin-left:20%;
         width:50%;
         height:25%;
-        background:linear-gradient(to bottom right,red, blue);
+        background:linear-gradient(to bottom right,red, blue); /*background colored red to blue diagonally*/
         font-size:35px;
         color:white;
         font-family:'Play', sans-serif;
+        /*horizontal and vertical back shadow*/
+        box-shadow:10px 10px;
+        text-shadow: 2px 2px black; 
+    }
+    
+    #josiah{
+        border-radius:50%;/*creates a more circular shape*/
+    }
+    
+    #CongressSymbol{
+        width:200px;
+        position: absolute;
+        left:5%;
+        top:28%;
+       
+    }
+    
+    .mission{
+        position:absolute;
+        width:20%;
+        height:14%;
+        top:52%;
+        left:5%;
+        border-radius:10%;
+        background:linear-gradient(yellow, lightgreen); /*background colored yellow to lightgreen from top to bottom */
+        font-size:25px;
+        color:blue; /*text color*/
+        text-shadow:1px 1px white;
+        animation:mission 6s linear 2s infinite alternate; /*makes the box with the mission, keep moving left and right*/
+    }
+    
+    /*controls the mission box's movements*/
+    @keyframes mission{
+        0%{left:10%;} /*beginning*/
+        25%{left:20%;transform: rotate(10deg);}
+        50%{left:30%;transform: rotate(-10deg);}
+        100%{left:40%;} /*end*/
+    }
+    
+    .ticketOrder{
+        position:absolute;
+        left:25%;
+        top:30%;
+        width:30%;
+        height:15%;
+        background:radial-gradient(red,lightblue); /*background color from red center to lightblue edges*/
+        font-size:25px;
+        font-family:Play;
+        transition: width 2s height 2s transform 2s; /*the duration of each transition(action)*/
+        
+    }
+    
+    .ticketOrder:hover{ /*when mouse is on ordering ticket box*/
+        width:35%;
+        height:20%;
+        background:radial-gradient(red,yellow);
+        box-shadow:10px 10px;
     }
   </style>
   </head>
   <body>
-  <div class = "container">
-  <img id ="fiftyStars" src="FiftyStars.svg">
+  <div class = "container"> <!--holds all other div-->
+  <img id ="fiftyStars" src="FiftyStars.svg"> <!--image-->
   <div class = "title-box"></div>
       <div class="title-name">
           Knowing The Branches 
       </div>
     <div class = "UScongress">
         <img id = "CongressSymbol" src="UScongress.png">
+        <div class = "ticketOrder">
+            <form id="form_order" action="http://www.w3schools.com/action_page.php" method="get">
+        
+            <strong><p id = "order">Order your tickets now</p></strong>
+            <!--creates email box and submit button-->
+            <input id="input_offer" type="text" name="Offer" placeholder="Email" required>
+            <input class="button" type="submit" value="Submit">
+            <br>Coming Soon!</br>
+          
+        </div>
     </div>
-    <div class = "UShouse">
-        <img id = "HouseSymbol" src="UShouse of representatives.png">
+    <div class = "mainCharacter">
+        <img id = "josiah" src="josiah.png">
+    </div>
+    <div class = "mission">
+        Josiah is on a mission to answer some of America's most pressing questions so that at last we can all know the branches.
     </div>
     <div class = "textBackground">
         
@@ -146,18 +206,18 @@
             <li>'To promote the general Welfare'</li>
             <li>'To secure the Blessings of Liberty'</li>
          
-    </div>
+   </div>
    <div class = "flag">
        <img id = "USflag" src="AmericanFlag.jpg">
        <div class= "overlay">
-           <div class = "text">The <mark>government</mark> is in charge with accomplishing <strong>six</strong> things that will benefit the Country and its citizens.</div>
+           <div class = "text">
+            The <mark>government</mark> is in charge with accomplishing <strong>six</strong> things that will benefit the Country and its citizens.
+            </div>
        </div>
-    <div class = "capital">
+       <div class = "capital">
         <img id = "capitalPic" src="capital.jpg">
-    </div>
-    
-    
-   </div>
+       </div>
+    </div> 
   </div>
   </body>
 </html>
